@@ -1,30 +1,39 @@
 package util;
 
+import model.*;
+
 public class Walk {
 	int arrived;
 	int exceed;
 	int target = Constants.TARGET;
 	int departure = Constants.DEPARTURE;
 	int cast = RandomDice.getRandomNumber();
+	int count = Constants.MIN;
 
-	public void play() {
+	// Walk<Player> wl = new Walk<Player>();
 
-		arrived = departure + cast;
-		System.out.println("le joueur se trouve à position" + arrived);
+	public void initPosition() {
+		System.out.println("Le joueur se trouve à position " + departure);
 	}
 
-	public void move(int arrived) {
+	public void throwDice(Player pl) {
+		arrived = departure + cast;
+		System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		if (arrived < target) {
 			cast = RandomDice.getRandomNumber();
 			arrived += cast;
-			System.out.println("le joueur se trouve à position" + arrived);
+			count++;
+			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		} else if (arrived > target) {
 			exceed = arrived - target;
 			arrived = target - exceed;
 			cast = RandomDice.getRandomNumber();
 			arrived += cast;
+			count++;
+			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		} else {
-			System.out.println("Bravooo!!!!! vous avez atteint l'objectif");
+			System.out.println(
+					"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tour");
 		}
 	}
 }
