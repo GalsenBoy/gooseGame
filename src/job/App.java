@@ -13,8 +13,6 @@ public class App {
 		Player player1 = new Player();
 		pl.add(player1);
 
-		int randomNumber = RandomDice.getRandomNumber();
-		System.out.println(randomNumber);
 		System.out.println(player1);
 	}
 }
