@@ -74,7 +74,7 @@ public class Player {
 	// Affiche les informations du joueur : nom,prénom et identifiant
 	@Override
 	public String toString() {
-		return "Nom : " + lastName + " , " + " firstName : " + firstName + " , " + " id : " + id + " va se lancer";
+		return "Prénom : " + firstName + " , " + " Nom : " + lastName + " , " + " Id : " + id + " va se lancer";
 	}
 
 }
