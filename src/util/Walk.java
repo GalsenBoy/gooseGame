@@ -18,23 +18,25 @@ public class Walk {
 		arrived = departure + cast;
 		System.out.println(pl.getFirstName() + " a obtenu " + cast);
 		System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
-		if (arrived < target) {
-			cast = RandomDice.getRandomNumber();
-			arrived += cast;
-			count++;
-			System.out.println(pl.getFirstName() + " a obtenu " + cast);
-			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
-		} else if (arrived > target) {
-			exceed = arrived - target;
-			arrived = target - exceed;
-			cast = RandomDice.getRandomNumber();
-			arrived += cast;
-			count++;
-			System.out.println(pl.getFirstName() + " a obtenu " + cast);
-			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
-		} else {
-			System.out.println(
-					"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tour");
+		while (arrived != target) {
+			if (arrived < target) {
+				cast = RandomDice.getRandomNumber();
+				arrived += cast;
+				count++;
+				System.out.println(pl.getFirstName() + " a obtenu " + cast);
+				System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
+			} else if (arrived > target) {
+				exceed = arrived - target;
+				arrived = target - exceed;
+				cast = RandomDice.getRandomNumber();
+				arrived += cast;
+				count++;
+				System.out.println(pl.getFirstName() + " a obtenu " + cast);
+				System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
+			} else {
+				System.out.println(
+						"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tour");
+			}
 		}
 	}
 }
