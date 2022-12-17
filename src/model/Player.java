@@ -76,5 +76,4 @@ public class Player {
 	public String toString() {
 		return "Prénom : " + firstName + " , " + " Nom : " + lastName + " , " + " Id : " + id + " va se lancer";
 	}
-
 }

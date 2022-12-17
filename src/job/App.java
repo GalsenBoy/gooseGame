@@ -9,7 +9,7 @@ public class App {
 		System.out.println("Veuillez saisir prénom, nom et identifiants dans l'ordre");
 		Player player1 = new Player();
 		System.out.println(player1);
-		Walk w = new Walk();
-		w.throwDice(player1);
+		Play p = new Play();
+		p.throwDice(player1);
 	}
 }
