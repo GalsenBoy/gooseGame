@@ -33,10 +33,10 @@ public class Walk {
 				count++;
 				System.out.println(pl.getFirstName() + " a obtenu " + cast);
 				System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
-			} else {
-				System.out.println(
-						"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tour");
 			}
 		}
+		System.out.println(
+				"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tours");
+
 	}
 }
