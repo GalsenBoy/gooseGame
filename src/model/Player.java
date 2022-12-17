@@ -25,7 +25,7 @@ public class Player {
 
 	/**
 	 * 
-	 * @return retourn le prénom du joueur
+	 * @return retourne le prénom du joueur
 	 */
 	public String getFirstName() {
 		return firstName;
@@ -41,7 +41,7 @@ public class Player {
 
 	/**
 	 * 
-	 * @return retourn le nom du joueur
+	 * @return retourne le nom du joueur
 	 */
 	public String getLastName() {
 		return lastName;
@@ -57,7 +57,7 @@ public class Player {
 
 	/**
 	 * 
-	 * @return retourn l'identifiant du joueur
+	 * @return retourne l'identifiant du joueur
 	 */
 	public String getId() {
 		return id;
