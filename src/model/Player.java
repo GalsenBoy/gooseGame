@@ -48,7 +48,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Nom : " + lastName + " , " + " firstName : " + lastName + " , " + " id : " + id + " va se lancer";
+		return "Nom : " + lastName + " , " + " firstName : " + firstName + " , " + " id : " + id + " va se lancer";
 	}
 
 }
