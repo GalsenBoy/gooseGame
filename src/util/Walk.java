@@ -7,22 +7,22 @@ public class Walk {
 	int exceed;
 	int target = Constants.TARGET;
 	int departure = Constants.DEPARTURE;
-	int cast = RandomDice.getRandomNumber();
 	int count = Constants.MIN;
-
-	// Walk<Player> wl = new Walk<Player>();
 
 	public void initPosition() {
 		System.out.println("Le joueur se trouve à position " + departure);
 	}
 
 	public void throwDice(Player pl) {
+		int cast = RandomDice.getRandomNumber();
 		arrived = departure + cast;
+		System.out.println(pl.getFirstName() + " a obtenu " + cast);
 		System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		if (arrived < target) {
 			cast = RandomDice.getRandomNumber();
 			arrived += cast;
 			count++;
+			System.out.println(pl.getFirstName() + " a obtenu " + cast);
 			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		} else if (arrived > target) {
 			exceed = arrived - target;
@@ -30,6 +30,7 @@ public class Walk {
 			cast = RandomDice.getRandomNumber();
 			arrived += cast;
 			count++;
+			System.out.println(pl.getFirstName() + " a obtenu " + cast);
 			System.out.println(pl.getFirstName() + " se trouve à la position " + arrived);
 		} else {
 			System.out.println(
