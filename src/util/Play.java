@@ -2,7 +2,7 @@ package util;
 
 import model.*;
 
-public class Walk {
+public class Play {
 	int arrived;
 	int exceed;
 	int target = Constants.TARGET;
@@ -37,6 +37,5 @@ public class Walk {
 		}
 		System.out.println(
 				"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tours");
-
 	}
 }
