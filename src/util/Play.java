@@ -2,6 +2,7 @@ package util;
 
 import model.*;
 
+//Déclaration et initialisation des mes variables
 public class Play {
 	int arrived;
 	int exceed;
@@ -9,10 +10,13 @@ public class Play {
 	int departure = Constants.DEPARTURE;
 	int count = Constants.MIN;
 
+	// Affichage de la position de départ du joueur
 	public void initPosition() {
 		System.out.println("Le joueur se trouve à position " + departure);
 	}
 
+	// Lancée et jeu
+	// Le joueur lance une dé tant que l'objectif n'est pas atteint il relance la dé
 	public void throwDice(Player pl) {
 		int cast = RandomDice.getRandomNumber();
 		arrived = departure + cast;
