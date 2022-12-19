@@ -15,31 +15,55 @@ public class Play {
 		System.out.println("Le joueur se trouve à position " + departure);
 	}
 
+	/**
+	 * 
+	 * @param p
+	 */
+	public void choose(Player p) {
+		while (p.enterChoice() != 2) {
+			switch (p.enterChoice()) {
+				case 1:
+					throwDice(p);
+					;
+					break;
+				case 2:
+					System.exit(1);
+					break;
+				case 3:
+					System.out.println(p.getScore());
+					break;
+				default:
+					break;
+			}
+		}
+	}
+
 	// Lancée et jeu
 	// Le joueur lance une dé tant que l'objectif n'est pas atteint il relance la dé
 	public void throwDice(Player pl) {
 		int cast = RandomDice.getRandomNumber();
 		arrived = departure + cast;
-		System.out.println(pl.getFirstName() + " a obtenu : " + cast);
+		System.out.println(pl.getFirstName() + " lance la dé : et il obtient " + cast);
 		System.out.println(pl.getFirstName() + " se trouve à la position : " + arrived);
-		while (arrived != target) {
-			if (arrived < target) {
-				cast = RandomDice.getRandomNumber();
-				arrived += cast;
-				count++;
-				System.out.println(pl.getFirstName() + " a obtenu : " + cast);
-				System.out.println(pl.getFirstName() + " se trouve à la position : " + arrived);
-			} else if (arrived > target) {
-				exceed = arrived - target;
-				arrived = target - exceed;
-				cast = RandomDice.getRandomNumber();
-				arrived += cast;
-				count++;
-				System.out.println(pl.getFirstName() + " a obtenu : " + cast);
-				System.out.println(pl.getFirstName() + " se trouve à la position : " + arrived);
-			}
+		// pl.setScore(arrived);
+		if (arrived < target) {
+			cast = RandomDice.getRandomNumber();
+			arrived += cast;
+			count++;
+			System.out.println(pl.getFirstName() + " lance la dé : et il obtient : " + cast);
+			System.out.println(pl.getFirstName() + " se trouve à la position : " + arrived);
+		} else if (arrived > target) {
+			exceed = arrived - target;
+			arrived = target - exceed;
+			cast = RandomDice.getRandomNumber();
+			arrived += cast;
+			count++;
+			System.out.println(pl.getFirstName() + " lance la dé : et il obtient : " + cast);
+			System.out.println(pl.getFirstName() + " se trouve à la position : " + arrived);
+		} else {
+			System.out.println(
+					"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tours");
 		}
-		System.out.println(
-				"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tours");
+
 	}
 }
