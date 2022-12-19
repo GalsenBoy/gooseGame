@@ -16,8 +16,10 @@ public class Play {
 	}
 
 	/**
+	 * Le joueur choisi en 1 et 3 s'il veut continuer la partie, arrêter le jeu ou
+	 * juste consulter son score
 	 * 
-	 * @param p
+	 * @param p prend en paramètre un joueur
 	 */
 	public void choose(Player p) {
 		while (p.enterChoice() != 2) {
@@ -38,8 +40,12 @@ public class Play {
 		}
 	}
 
-	// Lancée et jeu
-	// Le joueur lance une dé tant que l'objectif n'est pas atteint il relance la dé
+	/**
+	 * Le joueur lance une dé tant que l'objectif n'est pas atteint il relance la dé
+	 * Lancée et jeu
+	 * 
+	 * @param pl prend en paramètre un joueur
+	 */
 	public void throwDice(Player pl) {
 		int cast = RandomDice.getRandomNumber();
 		arrived = departure + cast;
@@ -64,6 +70,5 @@ public class Play {
 			System.out.println(
 					"Bravooo!!!!!" + pl.getFirstName() + " vous avez atteint l'objectif avec " + count + " tours");
 		}
-
 	}
 }
