@@ -23,13 +23,6 @@ public class Play {
 	 * @param pl prend en paramètre un joueur
 	 */
 	public void throwDice(Player pl) {
-		// int cast = RandomDice.getRandomNumber();
-		// arrived = departure + cast;
-		// System.out.println(pl.getFirstName() + " lance la dé : et il obtient " +
-		// cast);
-		// System.out.println(pl.getFirstName() + " se trouve à la position : " +
-		// arrived);
-		// pl.setScore(arrived);
 		if (arrived < target) {
 			cast = RandomDice.getRandomNumber();
 			arrived += cast;
@@ -75,5 +68,4 @@ public class Play {
 			}
 		}
 	}
-
 }
