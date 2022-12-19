@@ -10,6 +10,6 @@ public class App {
 		Player player1 = new Player();
 		System.out.println(player1);
 		Play p = new Play();
-		p.throwDice(player1);
+		p.choose(player1);
 	}
 }
